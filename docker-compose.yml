@@ -1,0 +1,9 @@
+mongo:
+  restart: always
+  build: .
+  ports:
+  - "9000:3000"
+  environment:
+  - HOST=docker
+  volumes:
+  - /var/log/mongo:/app/log
